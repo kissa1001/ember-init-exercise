@@ -1,3 +1,13 @@
-Hello from index <br>
-{{#link-to "orders" class="orders-link"}} Orders {{/link-to}} <br>
-{{#link-to "polls" class="polls-link"}} Polls {{/link-to}}
+<div class="card">
+	<h1>Order Today!</h1>
+	<p class = "card-content">Our online store helps...</p>
+	{{#link-to "orders" class="orders-link"}} Orders {{/link-to}} <br>
+	{{#link-to "polls" class="polls-link"}} Polls {{/link-to}}
+</div>
+
+<div class = "grid group">
+	{{#each model as |product|}}
+		<h2>{{product.title}}: <strong>${{product.price}}</strong></h2>
+		<p>{{product.description}}</p>
+	{{/each}}
+</div>
